@@ -1,12 +1,8 @@
-export function api(formData) {
-     return fetch('http://localhost:9090/api/registration', {
+export async function api(formData) {
+    const response = await fetch('http://localhost:9090/api/registration', {
         method: 'POST',
         body: formData,
     })
-         .then((response)=>{
-        return response.json()
-    })
-         .then((data)=>{
-            alert(data.message);
-        })
+    const data  = await response.json()
+    await alert(data.message);
 }

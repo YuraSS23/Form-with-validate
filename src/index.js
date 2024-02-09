@@ -20,7 +20,8 @@ form.addEventListener('submit', async (e) => {
 
     const formData = new FormData(form);
     if (validator()) {
-        api(formData).then(()=>form.reset())
+        await api(formData)
+        form.reset()
     }
 
     /*const data = (await response).body
