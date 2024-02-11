@@ -1,8 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const glob = require("glob-all");
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        yourAwesomeEntryPoint: glob.sync([
+            "./modal/*.js",
+            "./src/*.js",
+        ])
+    },
 
     output: {
         filename: 'bundle.js',
@@ -12,9 +18,9 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 use: ['style-loader', 'css-loader'],
-            },
+            }
         ],
     },
 

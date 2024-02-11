@@ -4,5 +4,9 @@ export async function api(formData) {
         body: formData,
     })
     const data  = await response.json()
-    await alert(data.message);
+    if (data.status === 'success') {
+        alert(data.message);
+    } else if (data.status === 'error') {
+        alert(`Произошла ошибка, попробуйте позже. Ошибка: ${data.message}`);
+    }
 }
