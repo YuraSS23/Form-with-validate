@@ -15,7 +15,6 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(form);
     if (validator()) {
-        debugger
         await api(formData)
         form.reset()
     }
