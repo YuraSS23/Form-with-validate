@@ -1,6 +1,6 @@
-.modalBtn {
-  margin-top: 20px;
-}
+$var1: #fefefe;
+$var2: #888888;
+$var3: #aaaaaa;
 
 @keyframes example {
   from {
@@ -21,24 +21,24 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-}
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888888;
-  width: 80%;
-  animation-name: example;
-  animation-duration: 1s;
-}
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  &:hover, &:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  &-content {
+    background-color: $var1;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid $var2;
+    width: 80%;
+    animation-name: example;
+    animation-duration: 1s;
+  }
+  .close {
+    color: $var3;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    &:hover, &:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
 }
