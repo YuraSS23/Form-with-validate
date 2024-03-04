@@ -22,6 +22,9 @@ $var3: #aaaaaa;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   &-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: $var1;
     margin: 15% auto;
     padding: 20px;
@@ -31,6 +34,7 @@ $var3: #aaaaaa;
     animation-duration: 1s;
   }
   .close {
+    align-self: end;
     color: $var3;
     float: right;
     font-size: 28px;
